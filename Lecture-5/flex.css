@@ -1,0 +1,30 @@
+.big-box {
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.big-box > .box {
+    height: 100px;
+    width: 200px;
+}
+
+.box1 {
+    background-color: red;
+}
+
+.box2 {
+    background-color: green;
+}
+
+.box3 {
+    background-color: blue;
+}
+
+.box4 {
+    background-color: orange;
+}
+
+.box5 {
+    background-color: yellow;
+}

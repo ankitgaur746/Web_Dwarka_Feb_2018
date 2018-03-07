@@ -1,0 +1,46 @@
+.card {
+    margin: 0 auto;
+    height: 600px;
+    width: 500px;
+    border: 1px solid rosybrown;
+}
+
+.card .card-image {
+    height: 300px;
+    border: 1px solid greenyellow;
+    width: 500px;
+}
+
+.card-desc {
+    height: 180px;
+    border: 1px solid goldenrod;
+    padding: 4px;
+}
+
+ul {
+    list-style: none;
+
+}
+
+li {
+    margin-bottom: 2px;
+}
+img {
+    max-width: 100%;
+}
+
+.card-desc {
+    text-align: left;
+    padding: 30px;
+    width: 440px;
+}
+.name {
+    width: 30%;
+}
+.desc {
+    width: 70%;
+}
+
+table {
+    width: 100%;
+}

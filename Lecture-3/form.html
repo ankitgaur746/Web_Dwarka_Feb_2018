@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+ <form method="post" action="#">
+     <input type="text" placeholder="enter your name" name="username" required>
+     <input type="password" placeholder="enter your password" name="password" required>
+     <input type="email" name="email">
+     <div>
+         <input type="checkbox" id="coding" name="interest" value="coding">
+         <label for="coding">Coding</label>
+     </div>
+     <div>
+         <input type="checkbox" id="music" name="interest" value="music">
+         <label for="music">Music</label>
+     </div>
+
+     <div>
+         <input type="radio" name="course" value="web" > Web
+         <input type="radio" name="course" value="android" required> Android
+         <input type="radio" name="section" value="A">A
+         <input type="radio" name="section" value="B">B
+     </div>
+
+     <input type="submit">
+ </form>
+</body>
+</html>
