@@ -25,7 +25,29 @@ function insert(connection,item,price, databaseCb){
     })
 }
 
+function update(connection,id,item,price, databaseCb){
+
+    let query = 'UPDATE SHOPPING SET item=?, price=?  WHERE id =?';
+    connection.query(query,[item, price,id], function(err, results){
+        if(err) throw err;
+        databaseCb(results);
+
+    })
+}
+
+function dlete(connection,id, databaseCb){
+
+    let query = 'DELETE FROM SHOPPING where id =?';
+    connection.query(query,[id], function(err, results){
+        if(err) throw err;
+        databaseCb(results);
+
+    })
+}
+
 module.exports = {
     display,
-    insert
+    insert,
+    update,
+    dlete
 };

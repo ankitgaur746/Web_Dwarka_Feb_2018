@@ -9,8 +9,9 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(server.static('public'));
 
-app.get('/', function(req,res){
+app.get('/display', function(req,res){
    database.display(function(data){
       res.send(data);
 
@@ -26,6 +27,28 @@ app.post('/insert', function(req,res){
 
 });
 
+
+app.post('/update', function(req,res){
+    let id=req.body.id;
+   let item = req.body.item;
+    let price = req.body.price;
+    database.update(id,item, price, function(data){
+        database.display(function(data){
+            res.send(data);
+
+        })
+    })
+
+});
+
+
+app.post('/delete', function(req,res){
+    let id = req.body.id;
+    database.dlete(id, function(data){
+        res.send(data);
+    })
+
+});
 app.listen(5000,function(){
    database.conect();
 

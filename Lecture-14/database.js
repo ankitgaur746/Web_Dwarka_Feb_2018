@@ -32,8 +32,25 @@ function insert(item, price, serverCb){
 
 }
 
+function update(id,item, price, serverCb){
+    operation.update(connection, id,item, price, function(data){
+        serverCb(data);
+
+    });
+
+}
+
+function dlete(id ,serverCb){
+    operation.dlete(connection, id, function(data){
+        serverCb(data);
+
+    });
+
+}
 module.exports = {
     conect,
     display,
-    insert
+    insert,
+    update,
+    dlete
 };
